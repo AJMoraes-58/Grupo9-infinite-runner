@@ -13,7 +13,7 @@ func _ready() -> void:
 	for cenaSeg in range(MAXIMO_DE_SEGMENTOS): #cria os segmentos iniciais
 		Gerar_Segmento()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if protagonista != null: 
 		#verifica se a protagonista ta saindo da parte de segmentos carregados
 		if protagonista.global_position.x > marcacaoDeSegmento - (LARGURA_DO_SEGMENTO * 2):

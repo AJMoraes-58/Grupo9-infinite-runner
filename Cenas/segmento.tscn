@@ -1,9 +1,17 @@
 [gd_scene format=3 uid="uid://c84favsh5ccip"]
 
+[ext_resource type="PackedScene" uid="uid://b5a1p5bnx7wd1" path="res://Cenas/obstaculo_simples.tscn" id="1_fb153"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iv7sf"]
 size = Vector2(1500, 27)
 
 [node name="segmento" type="Node2D" unique_id=662211891]
+
+[node name="obstaculoSimples" parent="." unique_id=158388069 instance=ExtResource("1_fb153")]
+position = Vector2(792, 636)
+
+[node name="obstaculoSimples2" parent="." unique_id=626379676 instance=ExtResource("1_fb153")]
+position = Vector2(-112, 681)
 
 [node name="chao" type="StaticBody2D" parent="." unique_id=1642318362]
 position = Vector2(0, 650)
@@ -19,9 +27,3 @@ offset_right = 916.0
 offset_bottom = 289.0
 color = Color(0.3137255, 0, 1, 1)
 metadata/_edit_use_anchors_ = true
-
-[node name="ColorRect2" type="ColorRect" parent="chao" unique_id=768965816]
-offset_left = 879.0
-offset_top = -84.0
-offset_right = 919.0
-offset_bottom = -44.0

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b5a1p5bnx7wd1"]
+
+[ext_resource type="Script" uid="uid://bxp4674ubmyym" path="res://Scripts/obstaculo_simples.gd" id="1_yg75w"]
+[ext_resource type="Texture2D" uid="uid://dc5t4hcakfa0n" path="res://icon.svg" id="1_ypbgm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yg75w"]
+size = Vector2(128, 128)
+
+[node name="obstaculoSimples" type="Area2D" unique_id=158388069]
+script = ExtResource("1_yg75w")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=915972913]
+modulate = Color(1, 0.27058825, 0, 1)
+texture = ExtResource("1_ypbgm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=956118933]
+shape = SubResource("RectangleShape2D_yg75w")
