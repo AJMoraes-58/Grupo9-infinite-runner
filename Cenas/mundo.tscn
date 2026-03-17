@@ -1,26 +1,28 @@
 [gd_scene format=3 uid="uid://bqm65lmpaug2e"]
 
+[ext_resource type="Script" uid="uid://bw1ubfxgx2cip" path="res://Scripts/chao.gd" id="1_j5dva"]
 [ext_resource type="PackedScene" uid="uid://tvtnh34op6og" path="res://Cenas/protagonista.tscn" id="1_oji8i"]
 
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j5dva"]
-size = Vector2(1155, 25)
+size = Vector2(1568, 25)
 
 [node name="Mundo" type="Node2D" unique_id=784131138]
 
-[node name="chao" type="StaticBody2D" parent="." unique_id=645592388]
+[node name="chao" type="StaticBody2D" parent="." unique_id=645592388 node_paths=PackedStringArray("protagonista")]
 position = Vector2(587, 632)
+script = ExtResource("1_j5dva")
+protagonista = NodePath("../protagonista")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chao" unique_id=2132043940]
-position = Vector2(-10.5, 2.5)
+position = Vector2(199, 2.5)
 shape = SubResource("RectangleShape2D_j5dva")
 
 [node name="ColorRect" type="ColorRect" parent="chao" unique_id=1272273090]
-offset_left = -587.0
+offset_left = -584.0
 offset_top = -11.0
-offset_right = 567.0
+offset_right = 980.0
 offset_bottom = 17.0
 color = Color(0.3137255, 0, 1, 1)
 
-[node name="Forster" parent="." unique_id=1602220430 instance=ExtResource("1_oji8i")]
-position = Vector2(40, 385)
+[node name="protagonista" parent="." unique_id=1602220430 instance=ExtResource("1_oji8i")]
+position = Vector2(279, 333)
