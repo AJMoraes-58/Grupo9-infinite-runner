@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://tvtnh34op6og"]
 
-[ext_resource type="Script" uid="uid://c5fvjsmlurmw" path="res://Scripts/forster.gd" id="1_3mf1m"]
+[ext_resource type="Script" uid="uid://dladac50ytvge" path="res://Scripts/protagonista.gd" id="1_3mf1m"]
 [ext_resource type="Texture2D" uid="uid://dc5t4hcakfa0n" path="res://icon.svg" id="1_p0ko2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3mf1m"]
 size = Vector2(126, 125)
 
-[node name="Forster" type="CharacterBody2D" unique_id=1602220430]
+[node name="protagonista" type="CharacterBody2D" unique_id=1602220430]
 script = ExtResource("1_3mf1m")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=371963964]

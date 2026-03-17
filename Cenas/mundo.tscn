@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bqm65lmpaug2e"]
 
-[ext_resource type="PackedScene" uid="uid://tvtnh34op6og" path="res://Cenas/forster.tscn" id="1_oji8i"]
+[ext_resource type="PackedScene" uid="uid://tvtnh34op6og" path="res://Cenas/protagonista.tscn" id="1_oji8i"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j5dva"]
 size = Vector2(1155, 25)
