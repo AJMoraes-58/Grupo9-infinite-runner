@@ -1,4 +1,5 @@
 extends CharacterBody2D
+@onready var animacao = $AnimatedSprite2D
 
 #var para vaiaveis; const para constantes
 #valor do pulo tem que ser negativo porque y=0 eh o topo da tela
@@ -18,8 +19,21 @@ func _physics_process(delta: float) -> void: #loop para o jogo rodar
 	
 	#ui_up eh a seta pra cima
 	if Input.is_action_just_pressed("ui_up") and quantidadeDePulos < MAXIMO_DE_PULOS:
-		velocity.y = VELOCIDADE_DO_PULO
-		quantidadeDePulos += 1
+		if is_on_floor():
+			velocity.y = VELOCIDADE_DO_PULO
+			quantidadeDePulos += 1
+
+		elif quantidadeDePulos < MAXIMO_DE_PULOS:
+			velocity.y = VELOCIDADE_DO_PULO
+			quantidadeDePulos += 1
+			animacao.stop()
+			animacao.play("pulo")
 	
+	#animacao
+	if is_on_floor():
+		animacao.play("corrida")
+	elif animacao.animation != "pulo":
+		animacao.play("pulo")
+		
 	velocity.x = VELOCIDADE_DA_CORRIDA
 	move_and_slide()

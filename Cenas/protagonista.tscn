@@ -1,21 +1,93 @@
 [gd_scene format=3 uid="uid://tvtnh34op6og"]
 
 [ext_resource type="Script" uid="uid://dladac50ytvge" path="res://Scripts/protagonista.gd" id="1_3mf1m"]
-[ext_resource type="Texture2D" uid="uid://dc5t4hcakfa0n" path="res://icon.svg" id="1_p0ko2"]
+[ext_resource type="Texture2D" uid="uid://dfv31idqu47pw" path="res://Artes/Personagem 1.png" id="2_4dfmo"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3mf1m"]
-size = Vector2(126, 125)
+[sub_resource type="AtlasTexture" id="AtlasTexture_4dfmo"]
+atlas = ExtResource("2_4dfmo")
+region = Rect2(0, 0, 523, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8hgg"]
+atlas = ExtResource("2_4dfmo")
+region = Rect2(523, 0, 523, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f05np"]
+atlas = ExtResource("2_4dfmo")
+region = Rect2(1046, 0, 523, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3qfo"]
+atlas = ExtResource("2_4dfmo")
+region = Rect2(1569, 0, 523, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f2jm7"]
+atlas = ExtResource("2_4dfmo")
+region = Rect2(2092, 0, 523, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2mgbb"]
+atlas = ExtResource("2_4dfmo")
+region = Rect2(2615, 0, 523, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7a47k"]
+atlas = ExtResource("2_4dfmo")
+region = Rect2(1569, 0, 523, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wj5i8"]
+atlas = ExtResource("2_4dfmo")
+region = Rect2(2092, 0, 523, 800)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2mgbb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4dfmo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8hgg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f05np")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3qfo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f2jm7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2mgbb")
+}],
+"loop": true,
+"name": &"corrida",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7a47k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wj5i8")
+}],
+"loop": false,
+"name": &"pulo",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4dfmo"]
+height = 140.0
 
 [node name="protagonista" type="CharacterBody2D" unique_id=1602220430]
 script = ExtResource("1_3mf1m")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=371963964]
-position = Vector2(63, 67)
-texture = ExtResource("1_p0ko2")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1096387233]
+position = Vector2(60.500004, 80.750015)
+scale = Vector2(0.28107077, 0.294375)
+sprite_frames = SubResource("SpriteFrames_2mgbb")
+animation = &"corrida"
+frame_progress = 0.5486174
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1375991720]
-position = Vector2(64, 67)
-shape = SubResource("RectangleShape2D_3mf1m")
+position = Vector2(73, 79)
+shape = SubResource("CapsuleShape2D_4dfmo")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=728148421]
 offset = Vector2(450, 0)
