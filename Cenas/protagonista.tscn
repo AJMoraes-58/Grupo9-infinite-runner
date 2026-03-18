@@ -14,7 +14,7 @@ position = Vector2(63, 67)
 texture = ExtResource("1_p0ko2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1375991720]
-position = Vector2(64, 68)
+position = Vector2(64, 67)
 shape = SubResource("RectangleShape2D_3mf1m")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=728148421]

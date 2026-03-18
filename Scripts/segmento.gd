@@ -2,28 +2,34 @@ extends Node2D
 @onready var opcoesDeObstaculos = [preload("res://Cenas/obstaculo_simples.tscn")]
 @onready var pontosParaGeracao = [$pontoUm, $pontoDois, $pontoTres] #pontos seguros de pulo valido
 
-const PROBABILIDADE_DE_APARECER: float = 0.5
-const ZONA_DE_SEGURANCA: float = 500.0
+const ZONA_DE_SEGURANCA: float = 400.0
+const MINIMO_DE_OBSTACULO_POR_SEGMENTO: int = 1
+const MAXIMO_DE_OBSTACULO_POR_SEGMENTO: int = 3
 
 func _ready() -> void:
+	Gerar_Area_De_Obstaculos()
+	
+	
+func Gerar_Area_De_Obstaculos() -> void:
+	
+	for filho in get_children(): #tira os obstaculos de cima do chao pra rodar o codigo e gerar os segmentos aleatorios
+		if filho.is_in_group("obs_tacu_los"):
+			filho.queue_free()
+		
 	if global_position.x <= ZONA_DE_SEGURANCA: #forca a zona segura a existir encerrando a funcao
 		return
 	
-	var quantidadeGerada = 0
+	#sorteio da quantidade de obstaculos por segmento
+	var quantidadeDeObstaculos = randi_range(MINIMO_DE_OBSTACULO_POR_SEGMENTO, MAXIMO_DE_OBSTACULO_POR_SEGMENTO)
+	var pontosDisponiveis = pontosParaGeracao.duplicate()
+	pontosDisponiveis.shuffle()
 	
-	for ponto in pontosParaGeracao: #analise de cada ponto seguro
-		var geracaoForcada = false
+	#geracao dos obstaculos seguindo o estipulado no sorteio
+	for quantidade in range(quantidadeDeObstaculos):
+		var pontoSorteado = pontosDisponiveis[quantidade]
+		var obstaculoEscolhido = opcoesDeObstaculos.pick_random()
+		var obstaculoNovo = obstaculoEscolhido.instantiate()
+		obstaculoNovo.position = pontoSorteado.position
+		obstaculoNovo.add_to_group("obs_tacu_los")
 		
-		if ponto == $pontoTres and quantidadeGerada == 0: #obriga a ter pelo menos 1 obstaculo por segmento
-			geracaoForcada = true
-		
-		var probabilidade = randf() #gera um numero aleatorio entre 0.0 e 1.0
-		
-		if probabilidade > PROBABILIDADE_DE_APARECER or geracaoForcada:
-			var obstaculoEscolhido = opcoesDeObstaculos.pick_random()
-			var obstaculoNovo = obstaculoEscolhido.instantiate()
-			
-			obstaculoNovo.position = ponto.position
-			add_child(obstaculoNovo)
-			
-			quantidadeGerada += 1
+		add_child(obstaculoNovo)
