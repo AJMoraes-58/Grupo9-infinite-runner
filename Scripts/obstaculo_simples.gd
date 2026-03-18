@@ -5,4 +5,4 @@ func _ready() -> void: #chama a funcao quando ocorre uma colisao
 	
 func Sistema_De_Colisao(corpo: Node2D) -> void:
 	if corpo.name == "protagonista":
-		get_tree().reload_current_scene() #recarrega o jogo quando bate
+		get_tree().call_deferred("reload_current_scene") #recarrega o jogo quando bate

@@ -8,4 +8,4 @@ script = ExtResource("1_j5dva")
 protagonista = NodePath("protagonista")
 
 [node name="protagonista" parent="." unique_id=1602220430 instance=ExtResource("1_oji8i")]
-position = Vector2(23, 361)
+position = Vector2(-92, 459)
