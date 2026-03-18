@@ -73,6 +73,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4dfmo"]
+radius = 20.0
 height = 140.0
 
 [node name="protagonista" type="CharacterBody2D" unique_id=1602220430]
@@ -83,10 +84,10 @@ position = Vector2(60.500004, 80.750015)
 scale = Vector2(0.28107077, 0.294375)
 sprite_frames = SubResource("SpriteFrames_2mgbb")
 animation = &"corrida"
-frame_progress = 0.5944597
+frame_progress = 0.7323702
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1375991720]
-position = Vector2(65, 79)
+position = Vector2(80, 81)
 shape = SubResource("CapsuleShape2D_4dfmo")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=728148421]

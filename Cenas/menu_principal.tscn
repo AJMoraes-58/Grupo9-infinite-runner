@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://bnwvpoiomoy1s"]
+
+[ext_resource type="Script" uid="uid://3yasdgke5nk8" path="res://Scripts/menu_principal.gd" id="1_5jrt5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5jrt5"]
+font_size = 30
+
+[node name="menuPrincipal" type="Control" unique_id=366599492]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5jrt5")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=498675954]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.24705882, 0.023529412, 0.3254902, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=471744832]
+layout_mode = 0
+offset_left = 271.0
+offset_top = 304.0
+offset_right = 880.0
+offset_bottom = 446.0
+
+[node name="jogo" type="Button" parent="VBoxContainer" unique_id=386735257]
+layout_mode = 2
+text = "JOGAR"
+
+[node name="credito" type="Button" parent="VBoxContainer" unique_id=1809945352]
+layout_mode = 2
+text = "CREDITOS"
+
+[node name="mutar" type="Button" parent="VBoxContainer" unique_id=157822894]
+layout_mode = 2
+text = "SOM"
+
+[node name="sair" type="Button" parent="VBoxContainer" unique_id=1786837607]
+layout_mode = 2
+text = "FECHAR"
+
+[node name="textoDeCreditos" type="Label" parent="." unique_id=1785562082]
+visible = false
+layout_mode = 0
+offset_left = 9.0
+offset_top = 528.0
+offset_right = 245.0
+offset_bottom = 635.0
+text = "Programação: AJ Moraes
+Musica: daniel
+Game Design: rebeca
+Artes: marina e brenda"
+
+[node name="nomeDoJogo" type="Label" parent="." unique_id=1398772172]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 84.0
+offset_right = 923.0
+offset_bottom = 271.0
+text = "TELA INICIAL TESTE"
+label_settings = SubResource("LabelSettings_5jrt5")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/jogo" to="." method="_on_jogo_pressed"]
+[connection signal="pressed" from="VBoxContainer/credito" to="." method="_on_credito_pressed"]
+[connection signal="pressed" from="VBoxContainer/mutar" to="." method="_on_mutar_pressed"]
+[connection signal="pressed" from="VBoxContainer/sair" to="." method="_on_sair_pressed"]

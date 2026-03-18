@@ -8,7 +8,7 @@ func Sistema_De_Colisao(corpo: Node2D) -> void:
 		Fim_De_Jogo()
 
 func Fim_De_Jogo() -> void:
-	var tela = get_tree().root.get_node("mundo/TelaDeGameOver")
+	var tela = get_tree().root.get_node("mundo/telaDeGameOver")
 	get_tree().paused = true
 	if tela:
 		tela.Mostrar_Tela_Game_Over()

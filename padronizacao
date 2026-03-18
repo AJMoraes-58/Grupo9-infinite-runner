@@ -1,0 +1,19 @@
+variavel: exemploDeNome
+- Tudo junto
+- Iniciais maiusculas, exceto a primeira
+
+constante: EXEMPLO_DE_NOME
+- Separada por underline
+- Tudo maiusculo
+
+funcao: Exemplo_De_Nome
+- Separada por underline
+- Todas as iniciais maiusculas
+
+nos: exemploDeNome
+- Tudo junto
+- Todas as iniciais maiusculas, exceto a primeira
+
+cenas e scripts: exemplo_de_nome
+- Separada por underline
+- Tudo minusculo

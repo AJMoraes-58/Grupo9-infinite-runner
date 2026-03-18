@@ -14,11 +14,11 @@ protagonista = NodePath("protagonista")
 [node name="protagonista" parent="." unique_id=1602220430 instance=ExtResource("1_oji8i")]
 position = Vector2(-95, 489)
 
-[node name="TelaDeGameOver" type="CanvasLayer" parent="." unique_id=71229866]
+[node name="telaDeGameOver" type="CanvasLayer" parent="." unique_id=71229866]
 process_mode = 3
 script = ExtResource("3_8gp82")
 
-[node name="ColorRect" type="ColorRect" parent="TelaDeGameOver" unique_id=1463779496]
+[node name="ColorRect" type="ColorRect" parent="telaDeGameOver" unique_id=1463779496]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -26,7 +26,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.84313726)
 
-[node name="Label" type="Label" parent="TelaDeGameOver" unique_id=1079077393]
+[node name="Label" type="Label" parent="telaDeGameOver" unique_id=1079077393]
 offset_right = 1151.0
 offset_bottom = 652.0
 text = "GAME OVER"
@@ -34,11 +34,11 @@ label_settings = SubResource("LabelSettings_qboq2")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="TelaDeGameOver" unique_id=97320280]
+[node name="Button" type="Button" parent="telaDeGameOver" unique_id=97320280]
 offset_left = 354.0
 offset_top = 485.0
 offset_right = 773.0
 offset_bottom = 594.0
 text = "RECOMEÇAR"
 
-[connection signal="pressed" from="TelaDeGameOver/Button" to="TelaDeGameOver" method="_on_button_pressed"]
+[connection signal="pressed" from="telaDeGameOver/Button" to="telaDeGameOver" method="_on_button_pressed"]
