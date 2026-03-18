@@ -83,7 +83,7 @@ position = Vector2(60.500004, 80.750015)
 scale = Vector2(0.28107077, 0.294375)
 sprite_frames = SubResource("SpriteFrames_2mgbb")
 animation = &"corrida"
-frame_progress = 0.5486174
+frame_progress = 0.20152801
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1375991720]
 position = Vector2(73, 79)

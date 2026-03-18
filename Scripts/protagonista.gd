@@ -7,13 +7,17 @@ extends CharacterBody2D
 const VELOCIDADE_DA_CORRIDA: float = 300.0
 const VELOCIDADE_DO_PULO: float = -450.0
 const MAXIMO_DE_PULOS: int = 2
+const ACELERADOR_DE_QUEDA: float = 2.0
 
 var gravidade = ProjectSettings.get_setting("physics/2d/default_gravity") #valor padrao do godot
 var quantidadeDePulos: int = 0
 
 func _physics_process(delta: float) -> void: #loop para o jogo rodar
 	if not is_on_floor():
-		velocity.y += gravidade*delta
+		if Input.is_action_pressed("ui_down"): #mecanica de descer mais rapido
+			velocity.y += (gravidade*ACELERADOR_DE_QUEDA) * delta
+		else:
+			velocity.y += gravidade*delta
 	else:
 		quantidadeDePulos = 0
 	
