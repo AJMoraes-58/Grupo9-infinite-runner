@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://c84favsh5ccip"]
 
 [ext_resource type="Script" uid="uid://bc6nx1jt00x1l" path="res://Scripts/segmento.gd" id="1_6ikba"]
-[ext_resource type="PackedScene" uid="uid://b5a1p5bnx7wd1" path="res://Cenas/obstaculo_simples.tscn" id="1_fb153"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iv7sf"]
 size = Vector2(1500, 27)
@@ -9,12 +8,14 @@ size = Vector2(1500, 27)
 [node name="segmento" type="Node2D" unique_id=662211891]
 script = ExtResource("1_6ikba")
 
-[node name="obstaculoSimples" parent="." unique_id=158388069 instance=ExtResource("1_fb153")]
-position = Vector2(566, 620)
+[node name="pontoUm" type="Marker2D" parent="." unique_id=300105926]
+position = Vector2(57, 618)
 
-[node name="obstaculoSimples2" parent="." unique_id=1318650242 instance=ExtResource("1_fb153")]
-modulate = Color(1, 0, 0.12941177, 1)
-position = Vector2(-509, 638)
+[node name="pontoDois" type="Marker2D" parent="." unique_id=216833621]
+position = Vector2(-544, 613)
+
+[node name="pontoTres" type="Marker2D" parent="." unique_id=780156823]
+position = Vector2(526, 620)
 
 [node name="chao" type="StaticBody2D" parent="." unique_id=1642318362]
 position = Vector2(0, 650)
@@ -37,6 +38,3 @@ offset_top = 432.99994
 offset_right = 28.003677
 offset_bottom = 468.11005
 rotation = 0.2617994
-
-[node name="obstaculoSimples3" parent="." unique_id=1428015710 instance=ExtResource("1_fb153")]
-position = Vector2(8, 630)

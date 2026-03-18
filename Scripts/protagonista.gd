@@ -4,7 +4,7 @@ extends CharacterBody2D
 #valor do pulo tem que ser negativo porque y=0 eh o topo da tela
 
 const VELOCIDADE_DA_CORRIDA: float = 300.0
-const VELOCIDADE_DO_PULO: float = -400.0
+const VELOCIDADE_DO_PULO: float = -500.0
 const MAXIMO_DE_PULOS: int = 2
 
 var gravidade = ProjectSettings.get_setting("physics/2d/default_gravity") #valor padrao do godot
