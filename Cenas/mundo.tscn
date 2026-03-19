@@ -61,5 +61,8 @@ text = "RECOMEÇAR"
 layout_mode = 2
 text = "MENU PRINCIPAL"
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=828126377]
+autoplay = true
+
 [connection signal="pressed" from="telaDeGameOver/VBoxContainer/recomecarJogo" to="telaDeGameOver" method="_on_button_pressed"]
 [connection signal="pressed" from="telaDeGameOver/VBoxContainer/irAoMenuPrincipal" to="telaDeGameOver" method="_on_ir_ao_menu_principal_pressed"]
