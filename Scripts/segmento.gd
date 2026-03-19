@@ -1,5 +1,6 @@
 extends Node2D
-@onready var opcoesDeObstaculos = [preload("res://Cenas/obstaculo_simples.tscn")]
+@onready var opcoesDeObstaculos = [preload("res://Cenas/cadeira.tscn"), preload("res://Cenas/cadeira_caida.tscn"),
+									preload("res://Cenas/caixa.tscn"), preload("res://Cenas/computador.tscn")]
 @onready var pontosParaGeracao = [$pontoUm, $pontoDois, $pontoTres] #pontos seguros de pulo valido
 
 const ZONA_DE_SEGURANCA: float = 400.0

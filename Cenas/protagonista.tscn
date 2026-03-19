@@ -2,30 +2,39 @@
 
 [ext_resource type="Script" uid="uid://dladac50ytvge" path="res://Scripts/protagonista.gd" id="1_3mf1m"]
 [ext_resource type="Texture2D" uid="uid://dfv31idqu47pw" path="res://Artes/personagens/Personagem 1.png" id="2_4dfmo"]
+[ext_resource type="Texture2D" uid="uid://bcwvanyve8rro" path="res://Artes/personagens/Personagem Anim-Sheet F-Sheet.png" id="2_o8hgg"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4dfmo"]
-atlas = ExtResource("2_4dfmo")
-region = Rect2(0, 0, 523, 800)
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jvr3"]
+atlas = ExtResource("2_o8hgg")
+region = Rect2(0, 0, 528, 512)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_o8hgg"]
-atlas = ExtResource("2_4dfmo")
-region = Rect2(523, 0, 523, 800)
+[sub_resource type="AtlasTexture" id="AtlasTexture_rerye"]
+atlas = ExtResource("2_o8hgg")
+region = Rect2(528, 0, 528, 512)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_f05np"]
-atlas = ExtResource("2_4dfmo")
-region = Rect2(1046, 0, 523, 800)
+[sub_resource type="AtlasTexture" id="AtlasTexture_4i3e0"]
+atlas = ExtResource("2_o8hgg")
+region = Rect2(1056, 0, 528, 512)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_r3qfo"]
-atlas = ExtResource("2_4dfmo")
-region = Rect2(1569, 0, 523, 800)
+[sub_resource type="AtlasTexture" id="AtlasTexture_55332"]
+atlas = ExtResource("2_o8hgg")
+region = Rect2(1584, 0, 528, 512)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_f2jm7"]
-atlas = ExtResource("2_4dfmo")
-region = Rect2(2092, 0, 523, 800)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ua2m7"]
+atlas = ExtResource("2_o8hgg")
+region = Rect2(2112, 0, 528, 512)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2mgbb"]
-atlas = ExtResource("2_4dfmo")
-region = Rect2(2615, 0, 523, 800)
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvvvf"]
+atlas = ExtResource("2_o8hgg")
+region = Rect2(2640, 0, 528, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_df14f"]
+atlas = ExtResource("2_o8hgg")
+region = Rect2(3168, 0, 528, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_icamq"]
+atlas = ExtResource("2_o8hgg")
+region = Rect2(3696, 0, 528, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7a47k"]
 atlas = ExtResource("2_4dfmo")
@@ -39,26 +48,32 @@ region = Rect2(2092, 0, 523, 800)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4dfmo")
+"texture": SubResource("AtlasTexture_8jvr3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_o8hgg")
+"texture": SubResource("AtlasTexture_rerye")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_f05np")
+"texture": SubResource("AtlasTexture_4i3e0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_r3qfo")
+"texture": SubResource("AtlasTexture_55332")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_f2jm7")
+"texture": SubResource("AtlasTexture_ua2m7")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2mgbb")
+"texture": SubResource("AtlasTexture_pvvvf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_df14f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_icamq")
 }],
 "loop": true,
 "name": &"corrida",
-"speed": 8.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -74,20 +89,19 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4dfmo"]
 radius = 20.0
-height = 140.0
+height = 166.0
 
 [node name="protagonista" type="CharacterBody2D" unique_id=1602220430]
 script = ExtResource("1_3mf1m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1096387233]
-position = Vector2(60.500004, 80.750015)
-scale = Vector2(0.28107077, 0.294375)
+position = Vector2(45.85134, 66.55501)
+scale = Vector2(0.33655813, 0.34982425)
 sprite_frames = SubResource("SpriteFrames_2mgbb")
 animation = &"corrida"
-frame_progress = 0.7323702
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1375991720]
-position = Vector2(80, 81)
+position = Vector2(67, 73)
 shape = SubResource("CapsuleShape2D_4dfmo")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=728148421]

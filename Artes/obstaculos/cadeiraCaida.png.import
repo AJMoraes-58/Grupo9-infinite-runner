@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgjly4rg2ico1"
-path="res://.godot/imported/Obstaculo 2.png-f3a0499977c5effe6141ca37fd9c3836.ctex"
+uid="uid://3pn6ocsr250d"
+path="res://.godot/imported/cadeiraCaida.png-179b3bef3bdbbee85e7d11c9b602ab4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Artes/obstaculos/Obstaculo 2.png"
-dest_files=["res://.godot/imported/Obstaculo 2.png-f3a0499977c5effe6141ca37fd9c3836.ctex"]
+source_file="res://Artes/obstaculos/cadeiraCaida.png"
+dest_files=["res://.godot/imported/cadeiraCaida.png-179b3bef3bdbbee85e7d11c9b602ab4b.ctex"]
 
 [params]
 

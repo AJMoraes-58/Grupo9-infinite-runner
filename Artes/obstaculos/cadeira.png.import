@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dft1cudryke1w"
-path="res://.godot/imported/Obstaculo 4.png-02e16fdb0e9b6dc8c3e6a185fc54157c.ctex"
+uid="uid://cgjly4rg2ico1"
+path="res://.godot/imported/cadeira.png-d00ac567c88e65bddc814f5ba1f5a445.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Artes/obstaculos/Obstaculo 4.png"
-dest_files=["res://.godot/imported/Obstaculo 4.png-02e16fdb0e9b6dc8c3e6a185fc54157c.ctex"]
+source_file="res://Artes/obstaculos/cadeira.png"
+dest_files=["res://.godot/imported/cadeira.png-d00ac567c88e65bddc814f5ba1f5a445.ctex"]
 
 [params]
 

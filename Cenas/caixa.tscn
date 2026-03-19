@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://64j4marvp8up"]
+
+[ext_resource type="Script" uid="uid://bxp4674ubmyym" path="res://Scripts/obstaculo_simples.gd" id="1_iclr6"]
+[ext_resource type="Texture2D" uid="uid://dft1cudryke1w" path="res://Artes/obstaculos/caixa.png" id="2_iclr6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bpxcr"]
+size = Vector2(97, 102.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iclr6"]
+size = Vector2(21, 41)
+
+[node name="obstaculoSimples" type="Area2D" unique_id=158388069]
+script = ExtResource("1_iclr6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=915972913]
+position = Vector2(-44.762028, -47.2458)
+scale = Vector2(0.5047005, 0.553949)
+texture = ExtResource("2_iclr6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=649679013]
+position = Vector2(-40.5, -20.75)
+shape = SubResource("RectangleShape2D_bpxcr")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=2012008421]
+position = Vector2(-87.5, -85.5)
+shape = SubResource("RectangleShape2D_iclr6")

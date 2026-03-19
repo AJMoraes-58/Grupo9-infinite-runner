@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://d3ulxcn2p1sus"]
+
+[ext_resource type="Script" uid="uid://bxp4674ubmyym" path="res://Scripts/obstaculo_simples.gd" id="1_mrqev"]
+[ext_resource type="Texture2D" uid="uid://dslakohj53amt" path="res://Artes/obstaculos/computador.png" id="2_mrqev"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bpxcr"]
+size = Vector2(74, 90.24999)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mrqev"]
+size = Vector2(25, 25)
+
+[node name="obstaculoSimples" type="Area2D" unique_id=158388069]
+script = ExtResource("1_mrqev")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=915972913]
+position = Vector2(-40.512024, -28.245796)
+scale = Vector2(0.5636177, 0.5670209)
+texture = ExtResource("2_mrqev")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=649679013]
+position = Vector2(-33, -14.875004)
+shape = SubResource("RectangleShape2D_bpxcr")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1647709434]
+position = Vector2(-84.5, 7.5)
+shape = SubResource("RectangleShape2D_mrqev")

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://baan036po8u4u"]
+
+[ext_resource type="Script" uid="uid://bxp4674ubmyym" path="res://Scripts/obstaculo_simples.gd" id="1_86ex5"]
+[ext_resource type="Texture2D" uid="uid://3pn6ocsr250d" path="res://Artes/obstaculos/cadeiraCaida.png" id="2_86ex5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bpxcr"]
+size = Vector2(140.5, 70.99999)
+
+[node name="obstaculoSimples" type="Area2D" unique_id=158388069]
+script = ExtResource("1_86ex5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=915972913]
+position = Vector2(-91, -33.991615)
+scale = Vector2(0.6305732, 0.52946657)
+texture = ExtResource("2_86ex5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=649679013]
+position = Vector2(-89.25, -8.500004)
+shape = SubResource("RectangleShape2D_bpxcr")

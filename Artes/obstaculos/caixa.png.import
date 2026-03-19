@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3pn6ocsr250d"
-path="res://.godot/imported/Obstaculo 3.png-d0d09ae97170d3873a6237c6110e9b97.ctex"
+uid="uid://dft1cudryke1w"
+path="res://.godot/imported/caixa.png-4a8d48a5fa8967839b08488fcb20f83d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Artes/obstaculos/Obstaculo 3.png"
-dest_files=["res://.godot/imported/Obstaculo 3.png-d0d09ae97170d3873a6237c6110e9b97.ctex"]
+source_file="res://Artes/obstaculos/caixa.png"
+dest_files=["res://.godot/imported/caixa.png-4a8d48a5fa8967839b08488fcb20f83d.ctex"]
 
 [params]
 
