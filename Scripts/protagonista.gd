@@ -4,14 +4,14 @@ extends CharacterBody2D
 #var para vaiaveis; const para constantes
 #valor do pulo tem que ser negativo porque y=0 eh o topo da tela
 
-const VELOCIDADE_DO_PRIMEIRO_PULO: float = -475.0
-const VELOCIDADE_DO_SEGUNDO_PULO: float = -370.0
+const ALCANCE_DO_PRIMEIRO_PULO: float = -475.0
+const ALCANCE_DO_SEGUNDO_PULO: float = -390.0
 const MAXIMO_DE_PULOS: int = 2
 const VELOCIDADE_MAXIMA_DA_CORRIDA: float = 900.0
 const ACELERADOR_DE_QUEDA: float = 2.7
 const TAXA_DE_ACELERACAO_CORRIDA: float = 4.0
 
-var velocidadeDaCorrida: float = 300.0
+var velocidadeDaCorrida: float = 400.0
 var gravidade = ProjectSettings.get_setting("physics/2d/default_gravity") #valor padrao do godot
 var quantidadeDePulos: int = 0
 
@@ -27,14 +27,14 @@ func _physics_process(delta: float) -> void: #loop para o jogo rodar
 	#ui_up eh a seta pra cima
 	if Input.is_action_just_pressed("ui_up") and quantidadeDePulos < MAXIMO_DE_PULOS:
 		if is_on_floor():
-			velocity.y = VELOCIDADE_DO_PRIMEIRO_PULO
+			velocity.y = ALCANCE_DO_PRIMEIRO_PULO
 			quantidadeDePulos += 1
 
 		elif quantidadeDePulos < MAXIMO_DE_PULOS:
 			if quantidadeDePulos > 0:
-				velocity.y = VELOCIDADE_DO_SEGUNDO_PULO
+				velocity.y = ALCANCE_DO_SEGUNDO_PULO
 			else:
-				velocity.y = VELOCIDADE_DO_PRIMEIRO_PULO
+				velocity.y = ALCANCE_DO_PRIMEIRO_PULO
 				
 			quantidadeDePulos += 1
 			animacao.stop()

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rifspfc6fbmb"
-path="res://.godot/imported/Personagem 2.png-60a205fedbcb9391aa706aeb850885eb.ctex"
+uid="uid://brmg3dyfhri50"
+path="res://.godot/imported/Obstaculo.png-84a578aa3f77083ba945e2e514692eeb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Artes/Personagem 2.png"
-dest_files=["res://.godot/imported/Personagem 2.png-60a205fedbcb9391aa706aeb850885eb.ctex"]
+source_file="res://Artes/obstaculos/Obstaculo.png"
+dest_files=["res://.godot/imported/Obstaculo.png-84a578aa3f77083ba945e2e514692eeb.ctex"]
 
 [params]
 

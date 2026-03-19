@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfv31idqu47pw"
-path="res://.godot/imported/Personagem 1.png-e6eaf24771cfd9ec12a5b37c39ebd125.ctex"
+uid="uid://di1wdoow8b6sx"
+path="res://.godot/imported/Cenário.png-030c6d68b07cc16656b2313a6efebad3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Artes/Personagem 1.png"
-dest_files=["res://.godot/imported/Personagem 1.png-e6eaf24771cfd9ec12a5b37c39ebd125.ctex"]
+source_file="res://Artes/cenarios/Cenário.png"
+dest_files=["res://.godot/imported/Cenário.png-030c6d68b07cc16656b2313a6efebad3.ctex"]
 
 [params]
 
