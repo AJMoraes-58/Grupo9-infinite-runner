@@ -34,11 +34,19 @@ label_settings = SubResource("LabelSettings_qboq2")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="telaDeGameOver" unique_id=97320280]
-offset_left = 354.0
-offset_top = 485.0
-offset_right = 773.0
-offset_bottom = 594.0
+[node name="VBoxContainer" type="VBoxContainer" parent="telaDeGameOver" unique_id=1269871799]
+offset_left = 210.0
+offset_top = 440.0
+offset_right = 917.0
+offset_bottom = 593.0
+
+[node name="recomecarJogo" type="Button" parent="telaDeGameOver/VBoxContainer" unique_id=97320280]
+layout_mode = 2
 text = "RECOMEÇAR"
 
-[connection signal="pressed" from="telaDeGameOver/Button" to="telaDeGameOver" method="_on_button_pressed"]
+[node name="irAoMenuPrincipal" type="Button" parent="telaDeGameOver/VBoxContainer" unique_id=33106355]
+layout_mode = 2
+text = "MENU PRINCIPAL"
+
+[connection signal="pressed" from="telaDeGameOver/VBoxContainer/recomecarJogo" to="telaDeGameOver" method="_on_button_pressed"]
+[connection signal="pressed" from="telaDeGameOver/VBoxContainer/irAoMenuPrincipal" to="telaDeGameOver" method="_on_ir_ao_menu_principal_pressed"]
