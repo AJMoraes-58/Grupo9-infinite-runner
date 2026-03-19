@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bi60xgar4q0pi" path="res://Scripts/mundo.gd" id="1_j5dva"]
 [ext_resource type="PackedScene" uid="uid://tvtnh34op6og" path="res://Cenas/protagonista.tscn" id="1_oji8i"]
-[ext_resource type="Texture2D" uid="uid://di1wdoow8b6sx" path="res://Artes/cenarios/Cenário.png" id="2_qboq2"]
+[ext_resource type="Texture2D" uid="uid://bg1huyx56l8jq" path="res://Artes/cenarios/Cenário V2.png" id="2_qboq2"]
 [ext_resource type="Script" uid="uid://gse3i7fmeqe5" path="res://Scripts/tela_de_game_over.gd" id="3_8gp82"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_qboq2"]
@@ -15,11 +15,11 @@ protagonista = NodePath("protagonista")
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=337337887]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=649283610]
-motion_mirroring = Vector2(9878, 0)
+motion_mirroring = Vector2(8510, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1116098891]
-position = Vector2(-227.99998, -6.0000014)
-scale = Vector2(0.78396827, 0.7990741)
+position = Vector2(-224, -14)
+scale = Vector2(0.67539686, 0.58731186)
 texture = ExtResource("2_qboq2")
 centered = false
 
