@@ -9,9 +9,9 @@ const ALCANCE_DO_SEGUNDO_PULO: float = -390.0
 const MAXIMO_DE_PULOS: int = 2
 const VELOCIDADE_MAXIMA_DA_CORRIDA: float = 900.0
 const ACELERADOR_DE_QUEDA: float = 2.7
-const TAXA_DE_ACELERACAO_CORRIDA: float = 4.0
+const TAXA_DE_ACELERACAO_CORRIDA: float = 5.0
 
-var velocidadeDaCorrida: float = 400.0
+var velocidadeDaCorrida: float = 450.0
 var gravidade = ProjectSettings.get_setting("physics/2d/default_gravity") #valor padrao do godot
 var quantidadeDePulos: int = 0
 

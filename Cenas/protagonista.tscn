@@ -91,6 +91,10 @@ animations = [{
 radius = 20.0
 height = 166.0
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_o8hgg"]
+a = Vector2(5, 94)
+b = Vector2(47, 36)
+
 [node name="protagonista" type="CharacterBody2D" unique_id=1602220430]
 script = ExtResource("1_3mf1m")
 
@@ -106,3 +110,6 @@ shape = SubResource("CapsuleShape2D_4dfmo")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=728148421]
 offset = Vector2(450, 0)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=264569295]
+shape = SubResource("SegmentShape2D_o8hgg")
