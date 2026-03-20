@@ -4,10 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://tvtnh34op6og" path="res://Cenas/protagonista.tscn" id="1_oji8i"]
 [ext_resource type="Texture2D" uid="uid://bg1huyx56l8jq" path="res://Artes/cenarios/Cenário V2.png" id="2_qboq2"]
 [ext_resource type="Script" uid="uid://gse3i7fmeqe5" path="res://Scripts/tela_de_game_over.gd" id="3_8gp82"]
+[ext_resource type="Texture2D" uid="uid://dtifbjd7nh0js" path="res://Artes/telas/GAME OVER SCREEN-03.jpg" id="5_osa5f"]
 [ext_resource type="AudioStream" uid="uid://crse5qdmyimws" path="res://Sons/rock.wav" id="5_qvmr6"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_qboq2"]
-font_size = 52
+[ext_resource type="Texture2D" uid="uid://cyi2y3yvdrvwm" path="res://Artes/botoes/retry.png" id="6_bjsl6"]
+[ext_resource type="Texture2D" uid="uid://b3co5442h6cdp" path="res://Artes/botoes/menu.png" id="7_yn71n"]
 
 [node name="mundo" type="Node2D" unique_id=784131138 node_paths=PackedStringArray("protagonista")]
 script = ExtResource("1_j5dva")
@@ -29,42 +29,38 @@ position = Vector2(-95, 514)
 
 [node name="telaDeGameOver" type="CanvasLayer" parent="." unique_id=71229866]
 process_mode = 3
-visible = false
 script = ExtResource("3_8gp82")
 
-[node name="ColorRect" type="ColorRect" parent="telaDeGameOver" unique_id=1463779496]
+[node name="TextureRect" type="TextureRect" parent="telaDeGameOver" unique_id=23912209]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.84313726)
+texture = ExtResource("5_osa5f")
+expand_mode = 1
 
-[node name="Label" type="Label" parent="telaDeGameOver" unique_id=1079077393]
-offset_right = 1151.0
-offset_bottom = 652.0
-text = "GAME OVER"
-label_settings = SubResource("LabelSettings_qboq2")
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="recomecarJogo" type="TextureButton" parent="telaDeGameOver" unique_id=894207370]
+offset_left = 752.0
+offset_top = 300.0
+offset_right = 1056.0
+offset_bottom = 389.0
+texture_normal = ExtResource("6_bjsl6")
+ignore_texture_size = true
+stretch_mode = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="telaDeGameOver" unique_id=1269871799]
-offset_left = 210.0
-offset_top = 440.0
-offset_right = 917.0
-offset_bottom = 593.0
-
-[node name="recomecarJogo" type="Button" parent="telaDeGameOver/VBoxContainer" unique_id=97320280]
-layout_mode = 2
-text = "RECOMEÇAR"
-
-[node name="irAoMenuPrincipal" type="Button" parent="telaDeGameOver/VBoxContainer" unique_id=33106355]
-layout_mode = 2
-text = "MENU PRINCIPAL"
+[node name="irAoMenuPrincipal" type="TextureButton" parent="telaDeGameOver" unique_id=197160117]
+offset_left = 754.0
+offset_top = 387.0
+offset_right = 1027.0
+offset_bottom = 472.0
+texture_normal = ExtResource("7_yn71n")
+ignore_texture_size = true
+stretch_mode = 4
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=828126377]
 stream = ExtResource("5_qvmr6")
 autoplay = true
 
-[connection signal="pressed" from="telaDeGameOver/VBoxContainer/recomecarJogo" to="telaDeGameOver" method="_on_button_pressed"]
-[connection signal="pressed" from="telaDeGameOver/VBoxContainer/irAoMenuPrincipal" to="telaDeGameOver" method="_on_ir_ao_menu_principal_pressed"]
+[connection signal="pressed" from="telaDeGameOver/recomecarJogo" to="telaDeGameOver" method="_on_button_pressed"]
+[connection signal="pressed" from="telaDeGameOver/irAoMenuPrincipal" to="telaDeGameOver" method="_on_ir_ao_menu_principal_pressed"]

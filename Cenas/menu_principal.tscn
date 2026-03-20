@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://bnwvpoiomoy1s"]
 
 [ext_resource type="Script" uid="uid://3yasdgke5nk8" path="res://Scripts/menu_principal.gd" id="1_5jrt5"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_5jrt5"]
-font_size = 30
+[ext_resource type="Texture2D" uid="uid://oglsm2nxvudo" path="res://Artes/telas/Home screen-01.jpg" id="2_xc8du"]
+[ext_resource type="Texture2D" uid="uid://iu8u16vps763" path="res://Artes/botoes/jogar.png" id="3_qa2y2"]
+[ext_resource type="Texture2D" uid="uid://evpnmie7y2nc" path="res://Artes/botoes/creditos.png" id="4_vi81c"]
+[ext_resource type="Texture2D" uid="uid://djetbx0jifrkf" path="res://Artes/botoes/sair.png" id="5_qb56n"]
 
 [node name="menuPrincipal" type="Control" unique_id=366599492]
 layout_mode = 3
@@ -14,37 +15,45 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5jrt5")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=498675954]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1440719162]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.24705882, 0.023529412, 0.3254902, 1)
+texture = ExtResource("2_xc8du")
+expand_mode = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=471744832]
+[node name="jogo" type="TextureButton" parent="." unique_id=333600981]
 layout_mode = 0
-offset_left = 271.0
-offset_top = 304.0
-offset_right = 880.0
-offset_bottom = 446.0
+offset_left = 788.0
+offset_top = 317.0
+offset_right = 1057.0
+offset_bottom = 398.0
+texture_normal = ExtResource("3_qa2y2")
+ignore_texture_size = true
+stretch_mode = 4
 
-[node name="jogo" type="Button" parent="VBoxContainer" unique_id=386735257]
-layout_mode = 2
-text = "JOGAR"
+[node name="credito" type="TextureButton" parent="." unique_id=1315204527]
+layout_mode = 0
+offset_left = 788.0
+offset_top = 402.0
+offset_right = 1062.0
+offset_bottom = 475.0
+texture_normal = ExtResource("4_vi81c")
+ignore_texture_size = true
+stretch_mode = 4
 
-[node name="credito" type="Button" parent="VBoxContainer" unique_id=1809945352]
-layout_mode = 2
-text = "CREDITOS"
-
-[node name="mutar" type="Button" parent="VBoxContainer" unique_id=157822894]
-layout_mode = 2
-text = "SOM"
-
-[node name="sair" type="Button" parent="VBoxContainer" unique_id=1786837607]
-layout_mode = 2
-text = "FECHAR"
+[node name="sair" type="TextureButton" parent="." unique_id=1367605838]
+layout_mode = 0
+offset_left = 788.0
+offset_top = 482.0
+offset_right = 1042.0
+offset_bottom = 559.0
+texture_normal = ExtResource("5_qb56n")
+ignore_texture_size = true
+stretch_mode = 4
 
 [node name="textoDeCreditos" type="Label" parent="." unique_id=1785562082]
 visible = false
@@ -58,18 +67,6 @@ Musica: daniel
 Game Design: rebeca
 Artes: marina e brenda"
 
-[node name="nomeDoJogo" type="Label" parent="." unique_id=1398772172]
-layout_mode = 0
-offset_left = 235.0
-offset_top = 84.0
-offset_right = 923.0
-offset_bottom = 271.0
-text = "TELA INICIAL TESTE"
-label_settings = SubResource("LabelSettings_5jrt5")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[connection signal="pressed" from="VBoxContainer/jogo" to="." method="_on_jogo_pressed"]
-[connection signal="pressed" from="VBoxContainer/credito" to="." method="_on_credito_pressed"]
-[connection signal="pressed" from="VBoxContainer/mutar" to="." method="_on_mutar_pressed"]
-[connection signal="pressed" from="VBoxContainer/sair" to="." method="_on_sair_pressed"]
+[connection signal="pressed" from="jogo" to="." method="_on_jogo_pressed"]
+[connection signal="pressed" from="credito" to="." method="_on_credito_pressed"]
+[connection signal="pressed" from="sair" to="." method="_on_sair_pressed"]

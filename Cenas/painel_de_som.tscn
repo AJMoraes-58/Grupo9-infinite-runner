@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b3gm3kbll2g81"]
+
+[ext_resource type="Texture2D" uid="uid://b1l5k4mcv51un" path="res://Artes/botoes/somAtivado.png" id="1_2o5v4"]
+[ext_resource type="Texture2D" uid="uid://ct237g81loixp" path="res://Artes/botoes/somDesativado.png" id="2_1epig"]
+[ext_resource type="Script" uid="uid://bep4d8ycdmmof" path="res://Scripts/mutar.gd" id="3_1epig"]
+
+[node name="painel_de_som" type="CanvasLayer" unique_id=484819061]
+process_mode = 3
+layer = 100
+
+[node name="mutar" type="TextureButton" parent="." unique_id=1956864048]
+process_mode = 3
+offset_left = 15.0
+offset_top = 20.0
+offset_right = 144.0
+offset_bottom = 146.0
+toggle_mode = true
+texture_normal = ExtResource("1_2o5v4")
+texture_pressed = ExtResource("2_1epig")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("3_1epig")
+
+[connection signal="pressed" from="mutar" to="mutar" method="_on_pressed"]

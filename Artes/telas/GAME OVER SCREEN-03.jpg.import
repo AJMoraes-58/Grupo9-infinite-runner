@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cg3eek2oey85u"
-path="res://.godot/imported/Game over screen (PREENCHER).jpg-2c89e09c47be12d564bbf3ff028ff533.ctex"
+uid="uid://dtifbjd7nh0js"
+path="res://.godot/imported/GAME OVER SCREEN-03.jpg-6e21c8bd9d04f6a896a1d2b1885b9eb2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Artes/telas/Game over screen (PREENCHER).jpg"
-dest_files=["res://.godot/imported/Game over screen (PREENCHER).jpg-2c89e09c47be12d564bbf3ff028ff533.ctex"]
+source_file="res://Artes/telas/GAME OVER SCREEN-03.jpg"
+dest_files=["res://.godot/imported/GAME OVER SCREEN-03.jpg-6e21c8bd9d04f6a896a1d2b1885b9eb2.ctex"]
 
 [params]
 

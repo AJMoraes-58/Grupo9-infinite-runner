@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcnwu0g47yvdb"
-path="res://.godot/imported/mute.png-7ff253ac692a365e5eafed0fda1145be.ctex"
+uid="uid://ct237g81loixp"
+path="res://.godot/imported/somDesativado.png-ca18cb404f1cfe63e55978030f5799ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Artes/botoes/mute.png"
-dest_files=["res://.godot/imported/mute.png-7ff253ac692a365e5eafed0fda1145be.ctex"]
+source_file="res://Artes/botoes/somDesativado.png"
+dest_files=["res://.godot/imported/somDesativado.png-ca18cb404f1cfe63e55978030f5799ad.ctex"]
 
 [params]
 
