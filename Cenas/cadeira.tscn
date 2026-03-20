@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cgjly4rg2ico1" path="res://Artes/obstaculos/cadeira.png" id="2_yg75w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yg75w"]
-size = Vector2(59, 40)
+size = Vector2(59, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bpxcr"]
 size = Vector2(82, 69.5)
@@ -18,7 +18,7 @@ scale = Vector2(0.56250006, 0.55865926)
 texture = ExtResource("2_yg75w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=956118933]
-position = Vector2(18.5, -68)
+position = Vector2(18.5, -63.5)
 shape = SubResource("RectangleShape2D_yg75w")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=649679013]

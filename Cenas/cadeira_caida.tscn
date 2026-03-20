@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://3pn6ocsr250d" path="res://Artes/obstaculos/cadeiraCaida.png" id="2_86ex5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bpxcr"]
-size = Vector2(140.5, 70.99999)
+size = Vector2(140.5, 57.999996)
 
 [node name="obstaculoSimples" type="Area2D" unique_id=158388069]
 script = ExtResource("1_86ex5")
@@ -15,5 +15,5 @@ scale = Vector2(0.6305732, 0.52946657)
 texture = ExtResource("2_86ex5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=649679013]
-position = Vector2(-57.25, -8.5)
+position = Vector2(-57.25, -2.000002)
 shape = SubResource("RectangleShape2D_bpxcr")
