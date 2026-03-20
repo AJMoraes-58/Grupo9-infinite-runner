@@ -21,6 +21,7 @@ PainelDeSom="*uid://b3gm3kbll2g81"
 
 [display]
 
+window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [physics]
