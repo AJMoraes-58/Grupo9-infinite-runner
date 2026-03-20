@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://bhg2dnaoqtnak"]
+
+[ext_resource type="Texture2D" uid="uid://b3co5442h6cdp" path="res://Artes/botoes/menu.png" id="1_ct8y5"]
+[ext_resource type="Script" uid="uid://rt70j11gc52y" path="res://Scripts/ir_ao_menu_principal.gd" id="2_a3en7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0ep0f"]
+font_size = 33
+font_color = Color(0.9938958, 0.5784554, 1, 1)
+
+[node name="creditos" type="Control" unique_id=1629641251]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1676597914]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.119189, 9.382488e-06, 0.11596396, 1)
+
+[node name="Label" type="Label" parent="." unique_id=557623028]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -113.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Programação: Akyras
+
+Musica: Daniel de Lima
+
+Game Design: Rebeca
+
+Artes: Marina Rubinato e Oikartz"
+label_settings = SubResource("LabelSettings_0ep0f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="irAoMenuPrincipal" type="TextureButton" parent="." unique_id=1443763857]
+layout_mode = 0
+offset_left = 435.0
+offset_top = 490.0
+offset_right = 708.0
+offset_bottom = 575.0
+texture_normal = ExtResource("1_ct8y5")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("2_a3en7")
+
+[connection signal="pressed" from="irAoMenuPrincipal" to="irAoMenuPrincipal" method="_on_pressed"]

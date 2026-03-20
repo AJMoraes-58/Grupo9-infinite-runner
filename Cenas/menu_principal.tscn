@@ -55,18 +55,6 @@ texture_normal = ExtResource("5_qb56n")
 ignore_texture_size = true
 stretch_mode = 4
 
-[node name="textoDeCreditos" type="Label" parent="." unique_id=1785562082]
-visible = false
-layout_mode = 0
-offset_left = 9.0
-offset_top = 528.0
-offset_right = 245.0
-offset_bottom = 635.0
-text = "Programação: AJ Moraes
-Musica: daniel
-Game Design: rebeca
-Artes: marina e brenda"
-
 [connection signal="pressed" from="jogo" to="." method="_on_jogo_pressed"]
 [connection signal="pressed" from="credito" to="." method="_on_credito_pressed"]
 [connection signal="pressed" from="sair" to="." method="_on_sair_pressed"]
