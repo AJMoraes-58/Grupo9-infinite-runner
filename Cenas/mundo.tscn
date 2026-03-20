@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://tvtnh34op6og" path="res://Cenas/protagonista.tscn" id="1_oji8i"]
 [ext_resource type="Texture2D" uid="uid://bg1huyx56l8jq" path="res://Artes/cenarios/Cenário V2.png" id="2_qboq2"]
 [ext_resource type="Script" uid="uid://gse3i7fmeqe5" path="res://Scripts/tela_de_game_over.gd" id="3_8gp82"]
+[ext_resource type="AudioStream" uid="uid://crse5qdmyimws" path="res://Sons/rock.wav" id="5_qvmr6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_qboq2"]
 font_size = 52
@@ -62,6 +63,7 @@ layout_mode = 2
 text = "MENU PRINCIPAL"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=828126377]
+stream = ExtResource("5_qvmr6")
 autoplay = true
 
 [connection signal="pressed" from="telaDeGameOver/VBoxContainer/recomecarJogo" to="telaDeGameOver" method="_on_button_pressed"]

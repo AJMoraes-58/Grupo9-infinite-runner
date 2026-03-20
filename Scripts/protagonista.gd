@@ -7,7 +7,7 @@ extends CharacterBody2D
 const ALCANCE_DO_PRIMEIRO_PULO: float = -475.0
 const ALCANCE_DO_SEGUNDO_PULO: float = -390.0
 const MAXIMO_DE_PULOS: int = 2
-const VELOCIDADE_MAXIMA_DA_CORRIDA: float = 900.0
+const VELOCIDADE_MAXIMA_DA_CORRIDA: float = 1500.0
 const ACELERADOR_DE_QUEDA: float = 2.7
 const TAXA_DE_ACELERACAO_CORRIDA: float = 5.0
 
