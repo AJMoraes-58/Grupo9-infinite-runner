@@ -1,8 +1,11 @@
 extends Node2D
+
+#codigo comentado: gerencia o mundo infinito. Cria os blocos de segmento e apaga os que ja passaram
+
 @export var protagonista: CharacterBody2D
 
 var segmentoDeCena: PackedScene = preload("res://Cenas/segmento.tscn") #pre carrega o segmento
-var marcacaoDeSegmento: float = 0.0 #marca onde termina o segmento para inserir outra
+var marcacaoDeSegmento: float = 0.0 #marca onde termina o segmento para inserir outro
 
 const LARGURA_DO_SEGMENTO: float = 1500.0 
 
@@ -16,13 +19,15 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if protagonista != null: 
 		#verifica se a protagonista ta saindo da parte de segmentos carregados
+		#se estiver, cria segmentos novos
 		if protagonista.global_position.x > marcacaoDeSegmento - (LARGURA_DO_SEGMENTO * 2):
 			Gerar_Segmento()
 
 func Gerar_Segmento() -> void:
-	var novoSegmento = segmentoDeCena.instantiate()
+	#funcao que cria os segmentos
+	var novoSegmento = segmentoDeCena.instantiate() #tranforma o segmento pre carregado em objeto real
 	novoSegmento.global_position.x = marcacaoDeSegmento
-	add_child(novoSegmento)
+	add_child(novoSegmento)#faz aparecer na tela
 	
 	segmentosAtivos.append(novoSegmento) #adiciona o novo segmento de cena a lista
 	marcacaoDeSegmento += LARGURA_DO_SEGMENTO #atualiza onde deve ser colocada o proximo segmento
@@ -30,4 +35,4 @@ func Gerar_Segmento() -> void:
 	#joga os segmentos ja passados fora para liberar espaco para os novos
 	if segmentosAtivos.size() > MAXIMO_DE_SEGMENTOS:
 		var segmentoVelho = segmentosAtivos.pop_front()
-		segmentoVelho.queue_free() #apaga o nó da memória do PC
+		segmentoVelho.queue_free() #apaga da memória do PC

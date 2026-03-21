@@ -1,7 +1,9 @@
 extends CharacterBody2D
+
+#codigo comentado: define caracteristicas da protagonista: velocidade, pulo, comandos...
+
 @onready var animacao = $AnimatedSprite2D
 
-#var para vaiaveis; const para constantes
 #valor do pulo tem que ser negativo porque y=0 eh o topo da tela
 
 const ALCANCE_DO_PRIMEIRO_PULO: float = -475.0
@@ -11,7 +13,7 @@ const VELOCIDADE_MAXIMA_DA_CORRIDA: float = 1500.0
 const ACELERADOR_DE_QUEDA: float = 2.7
 const TAXA_DE_ACELERACAO_CORRIDA: float = 6.0
 
-var velocidadeDaCorrida: float = 480.0
+var velocidadeDaCorrida: float = 460.0
 var gravidade = ProjectSettings.get_setting("physics/2d/default_gravity") #valor padrao do godot
 var quantidadeDePulos: int = 0
 
@@ -45,9 +47,9 @@ func _physics_process(delta: float) -> void: #loop para o jogo rodar
 		animacao.play("corrida")
 	elif animacao.animation != "pulo":
 		animacao.play("pulo")
-		
+	
+	#aumenta a velocidade e faz se mover
 	if velocidadeDaCorrida < VELOCIDADE_MAXIMA_DA_CORRIDA:
 		velocidadeDaCorrida += TAXA_DE_ACELERACAO_CORRIDA * delta
-	
 	velocity.x = velocidadeDaCorrida
 	move_and_slide()
