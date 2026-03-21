@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://b1l5k4mcv51un" path="res://Artes/botoes/somAtivado.png" id="1_2o5v4"]
 [ext_resource type="Texture2D" uid="uid://ct237g81loixp" path="res://Artes/botoes/somDesativado.png" id="2_1epig"]
 [ext_resource type="Script" uid="uid://bep4d8ycdmmof" path="res://Scripts/mutar.gd" id="3_1epig"]
+[ext_resource type="AudioStream" uid="uid://dllj7gadyilwl" path="res://Sons/trilha/intro.ogg" id="4_40xwe"]
+[ext_resource type="AudioStream" uid="uid://b45eetoe3g7nn" path="res://Sons/para os botões.ogg" id="5_c82cm"]
 
 [node name="painel_de_som" type="CanvasLayer" unique_id=484819061]
 process_mode = 3
@@ -20,5 +22,14 @@ texture_pressed = ExtResource("2_1epig")
 ignore_texture_size = true
 stretch_mode = 4
 script = ExtResource("3_1epig")
+
+[node name="musicaMenu" type="AudioStreamPlayer" parent="." unique_id=1736807454]
+stream = ExtResource("4_40xwe")
+autoplay = true
+bus = &"musica"
+
+[node name="somDosBotoes" type="AudioStreamPlayer" parent="." unique_id=382173615]
+process_mode = 3
+stream = ExtResource("5_c82cm")
 
 [connection signal="pressed" from="mutar" to="mutar" method="_on_pressed"]

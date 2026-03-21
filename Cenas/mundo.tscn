@@ -5,9 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://bg1huyx56l8jq" path="res://Artes/cenarios/Cenário V2.png" id="2_qboq2"]
 [ext_resource type="Script" uid="uid://gse3i7fmeqe5" path="res://Scripts/tela_de_game_over.gd" id="3_8gp82"]
 [ext_resource type="Texture2D" uid="uid://dtifbjd7nh0js" path="res://Artes/telas/GAME OVER SCREEN-03.jpg" id="5_osa5f"]
-[ext_resource type="AudioStream" uid="uid://crse5qdmyimws" path="res://Sons/rock.wav" id="5_qvmr6"]
 [ext_resource type="Texture2D" uid="uid://cyi2y3yvdrvwm" path="res://Artes/botoes/retry.png" id="6_bjsl6"]
 [ext_resource type="Texture2D" uid="uid://b3co5442h6cdp" path="res://Artes/botoes/menu.png" id="7_yn71n"]
+[ext_resource type="AudioStream" uid="uid://d3bwd46ho83ig" path="res://Sons/trilha/rock.ogg" id="8_osa5f"]
 
 [node name="mundo" type="Node2D" unique_id=784131138 node_paths=PackedStringArray("protagonista")]
 script = ExtResource("1_j5dva")
@@ -59,8 +59,9 @@ ignore_texture_size = true
 stretch_mode = 4
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=828126377]
-stream = ExtResource("5_qvmr6")
+stream = ExtResource("8_osa5f")
 autoplay = true
+bus = &"musica"
 
 [connection signal="pressed" from="telaDeGameOver/recomecarJogo" to="telaDeGameOver" method="_on_button_pressed"]
 [connection signal="pressed" from="telaDeGameOver/irAoMenuPrincipal" to="telaDeGameOver" method="_on_ir_ao_menu_principal_pressed"]
